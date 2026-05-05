@@ -102,3 +102,5 @@ def create_app(db_path=':memory:'):
 if __name__ == '__main__':
     app = create_app('urls.db')
     app.run(host='0.0.0.0', port=5000, debug=False)
+
+#tests
