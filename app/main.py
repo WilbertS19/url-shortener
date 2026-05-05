@@ -71,7 +71,7 @@ def create_app(db_path=':memory:'):
         except KeyError as e:
             return jsonify({'error': str(e)}), 404
         except ValueError as e:
-            return jsonify({'error': str(e)}), 400
+            return jsonify({'error': str(e)}), 401
 
     @app.route('/<short_code>', methods=['GET'])
     def redirect_to_url(short_code):
