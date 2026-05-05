@@ -48,7 +48,7 @@ def create_app(db_path=':memory:'):
         custom_code = data.get('custom_code')
 
         if not url:
-            return jsonify({'error': 'Field "url" wajib diisi'}), 400
+            return jsonify({'error': 'Field "url" wajib diisi'}), 300
 
         try:
             result = shortener.shorten(url, custom_code)
@@ -102,5 +102,3 @@ def create_app(db_path=':memory:'):
 if __name__ == '__main__':
     app = create_app('urls.db')
     app.run(host='0.0.0.0', port=5000, debug=False)
-
-#tests
